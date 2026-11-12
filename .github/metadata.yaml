@@ -1,0 +1,9 @@
+description: "Periodic wave shapes for Swift as closed-form functions of phase: sine, sawtooth, square and triangle."
+topics:
+  - primitives
+  - waveform
+  - signal
+  - audio
+homepage: "https://swift-institute.org"
+readme:
+  family: E
