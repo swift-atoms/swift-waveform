@@ -2,12 +2,6 @@
 
 Use this package when you need the height of a periodic wave at a point of its cycle: a tone for a sound, a wobble for a motion, a test signal. Start from `Waveform`, one of `.sine`, `.triangle`, `.sawtooth` and `.square`, and ask for `value(at:)` with a phase counted in cycles. The answer is a formula in the phase, so samples can be computed alone, out of order and in parallel, and always agree. A frequency and a running phase are the caller's: at `frequency` cycles per unit of time the phase at `time` is `frequency × time`. The scalar supplies `sin` through `Trigonometry.Circular`; this package conforms no type.
 
-```swift
-import Waveform
-
-let height: Double = Waveform.triangle.value(at: 0.125)  // 0.5
-```
-
 ## Laws
 
 - Phase is counted in cycles. `Waveform.cycle(of:)` is the part of a phase within its cycle, from 0 up to but not at 1; for a negative phase it counts from the cycle's start, so the part of -0.25 is 0.75.
